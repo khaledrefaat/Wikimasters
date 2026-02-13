@@ -6,7 +6,7 @@ import assert from 'node:assert';
 
 assert(process.env.DATABASE_URL, 'DATABASE_URL is not defined');
 
-const sql = neon(process.env.DATABASE_URL);
+export const sql = neon(process.env.DATABASE_URL);
 const db = drizzle(sql, { schema });
 
 export default db;
